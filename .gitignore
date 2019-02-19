@@ -2,3 +2,5 @@
 HttpServer/.vs/
 HttpServer/HttpServer/obj/
 HttpServer/HttpServer/bin/
+HttpServer/UnitTestHttpServer/obj/
+HttpServer/UnitTestHttpServer/bin/
