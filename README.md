@@ -1,12 +1,12 @@
 #MyP_HttpServer
 Servidor HTTP 1.1
-#UNIVERSIDAD EAFIT <h1>
-# Realizado por : Ana Builes Arias - German Bedoya - Juan Fernando Zuluaga <h2>
+# UNIVERSIDAD EAFIT <h1>
+## Realizado por : Ana Builes Arias - German Bedoya - Juan Fernando Zuluaga 
 Este documento es una descripción de arquitectura (AD) para el proyecto caso de estudio Servidor Http 1.1. Está descripcion de arquitectura intenta dar algunos ejemplos de la arquitectura del caso de estudio y como los diferentes componentes de está se relacionan entre sí.
 
 Este documento captura la arquitectura del caso de estudio Servidor Http 1.1 y el propósito es estudiar, analizar y documentar las decisiones claves en el diseño de la arquitectura del proyecto así como sus capacidades, la tecnología elegida y los requisitos identificados para los interesados en el caso de estudio.
 
-##**VISTA DE REQUERIMIENTOS**
+## **VISTA DE REQUERIMIENTOS**
 
 **Requerimientos Funcionales del caso de estudio**
 
