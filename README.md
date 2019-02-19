@@ -1,8 +1,6 @@
 # MyP_HttpServer 
 Servidor HTTP 1.1
 
- <img align="right" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
-
 # UNIVERSIDAD EAFIT <h1>
 ### Realizado por : Ana Builes Arias - German Bedoya - Juan Fernando Zuluaga 
 Este documento es una descripción de arquitectura (AD) para el proyecto caso de estudio Servidor Http 1.1. Está descripcion de arquitectura intenta dar algunos ejemplos de la arquitectura del caso de estudio y como los diferentes componentes de está se relacionan entre sí.
@@ -43,8 +41,11 @@ Ante cualquier fallo en el sistema este deberá ser de fácil identificación pa
 La estrategia de la solución por la cual se optó tras el análisis realizado para crear el servidor HTTP vr 1.1 es utilizar el lenguaje de programación XXX ya que con este lenguaje podemos tener un desarrollo ágil y sencillo, enfocándonos en la facilidad del codigo de estar organizado y legible para que cualquier persona pueda entenderlo
 
 ## **VISTA DE ALTO NIVEL**
+<img align="center" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
 ## **DIAGRAMA DE FLUJO**
+<img align="left" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
 ## **DIAGRAMA DE CLASES**
+<img align="right" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
 
 ## **DECISIONES DE DISEÑO**
 
