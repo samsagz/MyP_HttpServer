@@ -42,17 +42,17 @@ La estrategia de la solución por la cual se optó tras el análisis realizado p
 
 ## **VISTA DE ALTO NIVEL**
 
-<img align="center" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png" >
+<img align="center" src="https://github.com/samsagz/MyP_HttpServer/blob/master/Diagramas/VistaDeAltoNivel.png" >
 <p>
 
 ## **DIAGRAMA DE FLUJO**
 
-<img align="center" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
+<img align="center" src="https://github.com/samsagz/MyP_HttpServer/blob/master/Diagramas/DiagramaDeFlujo.png">
 <p>
   
 ## **DIAGRAMA DE CLASES**
 
-<img align="center" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
+<img align="center" src="https://github.com/samsagz/MyP_HttpServer/blob/master/Diagramas/DiagramaDeClases.png">
 <p>
 
 ## **DECISIONES DE DISEÑO**
