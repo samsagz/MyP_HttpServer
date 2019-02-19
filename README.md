@@ -1,5 +1,8 @@
 # MyP_HttpServer 
 Servidor HTTP 1.1
+
+ <img align="right" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
+
 # UNIVERSIDAD EAFIT <h1>
 ### Realizado por : Ana Builes Arias - German Bedoya - Juan Fernando Zuluaga 
 Este documento es una descripción de arquitectura (AD) para el proyecto caso de estudio Servidor Http 1.1. Está descripcion de arquitectura intenta dar algunos ejemplos de la arquitectura del caso de estudio y como los diferentes componentes de está se relacionan entre sí.
