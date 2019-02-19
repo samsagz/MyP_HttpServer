@@ -1,7 +1,7 @@
 #MyP_HttpServer
 Servidor HTTP 1.1
 # UNIVERSIDAD EAFIT <h1>
-## Realizado por : Ana Builes Arias - German Bedoya - Juan Fernando Zuluaga 
+### Realizado por : Ana Builes Arias - German Bedoya - Juan Fernando Zuluaga 
 Este documento es una descripción de arquitectura (AD) para el proyecto caso de estudio Servidor Http 1.1. Está descripcion de arquitectura intenta dar algunos ejemplos de la arquitectura del caso de estudio y como los diferentes componentes de está se relacionan entre sí.
 
 Este documento captura la arquitectura del caso de estudio Servidor Http 1.1 y el propósito es estudiar, analizar y documentar las decisiones claves en el diseño de la arquitectura del proyecto así como sus capacidades, la tecnología elegida y los requisitos identificados para los interesados en el caso de estudio.
@@ -25,9 +25,9 @@ Este documento captura la arquitectura del caso de estudio Servidor Http 1.1 y e
 En esta sección se hablará sobre los Atributos de Calidad objetivos en la arquitectura del caso de estudio
 
 ### **ATRIBUTOS DE CALIDAD**
-** 1. CONFIABILIDAD **
+**1. CONFIABILIDAD**
 El sistema debe ser tolerante a fallos.
-** 2. MANTENIBILIDAD **
+**2. MANTENIBILIDAD**
 Ante cualquier fallo en el sistema este deberá ser de fácil identificación para su reparación en el menor tiempo posible
 
 ## **RESTRICCIONES DE LA ARQUITECTURA**
@@ -52,7 +52,7 @@ El servidor contará con dos tipos de verbos GET y POST. También incluirá las 
 
 Adicional el servidor estará abierto en el puerto 8080.
 
-### **RUTAS DEL CODIGO**
+## **RUTAS DEL CODIGO**
 
 Repositorio : [GitHub]( https://github.com/samsagz/MyP_HttpServer )
 
