@@ -8,7 +8,7 @@ Servidor HTTP 1.1
 Este documento es una descripción de arquitectura (AD) para el proyecto caso de estudio Servidor Http 1.1. Está descripcion de arquitectura intenta dar algunos ejemplos de la arquitectura del caso de estudio y como los diferentes componentes de está se relacionan entre sí.
 
 Este documento captura la arquitectura del caso de estudio Servidor Http 1.1 y el propósito es estudiar, analizar y documentar las decisiones claves en el diseño de la arquitectura del proyecto así como sus capacidades, la tecnología elegida y los requisitos identificados para los interesados en el caso de estudio.
-<\p>
+
 
 ## **VISTA DE REQUERIMIENTOS**
 
