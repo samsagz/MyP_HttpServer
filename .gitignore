@@ -2,3 +2,5 @@
 HttpServer/.vs/
 HttpServer/HttpServer/obj/
 HttpServer/HttpServer/bin/
+
+.DS_Store
