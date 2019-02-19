@@ -11,18 +11,19 @@ Este documento captura la arquitectura del caso de estudio Servidor Http 1.1 y e
 
 ## **VISTA DE REQUERIMIENTOS**
 
-**Requerimientos Funcionales del caso de estudio**
 
-1. El sistema debe de cumplir con el estándar HTTP/1.1 de 1999
-2. El sistema debe de almacenar en un log todas las solicitudes hechas, sean correctas o incorrectas
-3. El sistema debe de analizar la ruta ingresada y responder 200 si la ruta está correcta o 400 si la ruta no se encuentra o si hay algún error en ella.El sistema debe de controlar dos respuestas, OK con código 200 o Not Found 404
+| **#** | **Descripción de los Requerimientos Funcionales**  |
+| :-: |:---------------------------------------------------------------------------------------------------|
+| 1 | El sistema debe de cumplir con el estándar HTTP/1.1 de 1999 |
+| 2 | El sistema debe de almacenar en un log todas las solicitudes hechas, sean correctas o incorrectas |
+| 3 | El sistema debe de analizar la ruta ingresada y responder 200 si la ruta está correcta o 400 si la ruta no se encuentra o si hay algún error en ella.El sistema debe de controlar dos respuestas, OK con código 200 o Not Found 404 |
 
   
-**Requerimientos No Funcionales del caso de estudio**
-
-1. El sistema deberá ser eficiente, deberá soportar por lo menos 50 transacciones por segundo
-2. El código del sistema debe ser bien organizado y legible
-3. El sistema deberá ser mantenible en el tiempo
+| **#** | **Descripción de los Requerimientos No Funcionales**  |
+| :-: |:---------------------------------------------------------------------------------------------------|
+| 1 | El sistema deberá ser eficiente, deberá soportar por lo menos 50 transacciones por segundo |
+| 2 | El código del sistema debe ser bien organizado y legible |
+| 3 | El sistema deberá ser mantenible en el tiempo |
   
 ## **METAS DE CALIDAD**
 
@@ -44,7 +45,7 @@ Ante cualquier fallo en el sistema este deberá ser de fácil identificación pa
   
 ## **ESTRATEGIA DE LA SOLUCIÓN**
 
-La estrategia de la solución por la cual se optó tras el análisis realizado para crear el servidor HTTP vr 1.1 es utilizar el lenguaje de programación XXX ya que con este lenguaje podemos tener un desarrollo ágil y sencillo, enfocándonos en la facilidad del codigo de estar organizado y legible para que cualquier persona pueda entenderlo
+La estrategia de la solución por la cual se optó tras el análisis realizado para crear el servidor HTTP vr 1.1 es utilizar el lenguaje de programación C# ya que con este lenguaje podemos tener un desarrollo ágil y sencillo, enfocándonos en la facilidad del codigo de estar organizado y legible para que cualquier persona pueda entenderlo
   
 ## **VISTA DE ALTO NIVEL**
 
@@ -74,6 +75,21 @@ Adicional el servidor estará abierto en el puerto 8080.
 
 Repositorio : [MyP_HttpServer]( https://github.com/samsagz/MyP_HttpServer )
 
-## **REQUERIMIENTOS DE CALIDAD**
-## **RIESGOS Y DEUDA TECNICA**
+## **CASOS DE PRUEBA**
+
+| **ID** | **NOMBRE DEL CASO DE PRUEBA**  | **OBJETIVOS DEL CASO DE PRUEBA**  |
+| :-: |:--------------------------------------------------| :--------------------------------------------------------------|
+| UT001 | Validar estructura header | Validar que la estructura del header corresponda a la definida. |
+| UT002 | Verificar la respuesta de error | Al momento de no existir una url ingresada, responder correctamente con el mensaje 404 |
+| UT003 | Verificar la escritura del log | Al momento de realizar una solicitud, se debe de crear un archivo .txt con la peticion y las caracteristicas de la misma |
+
+
 ## **GLOSARIO**
+
+| TERMINO | DESCRIPCIÓN  |
+| :-: |:---------------------------------------------------------------------------------------------------|
+| Http | Un servidor web brinda soporte para HTTP (Hypertext Transfer Protocol ó  Protocolo de Transferencia de Hipertexto). Como su nombre lo indica, HTTP especifica cómo transferir hypertext (es decir, documentos web vinculados) entre dos computadoras. Un protocolo es un conjunto de reglas para la comunicación entre dos computadoras. HTTP es un protocolo textual, sin estado. (https://developer.mozilla.org/es/docs/Learn/Common_questions/Que_es_un_servidor_WEB) |
+| Socket | Un socket (enchufe), es un método para la comunicación entre un programa del cliente y un programa del servidor en una red. Un socket se define como el punto final en una conexión. (http://www.masadelante.com/faqs/socket)|
+
+## **BIBLIOGRAFIA**
+[HTTP Server: Everything you need to know to Build a simple HTTP server from scratch](https://medium.com/from-the-scratch/http-server-what-do-you-need-to-know-to-build-a-simple-http-server-from-scratch-d1ef8945e4fa), Skrew Everything, Mar 16, 2018
