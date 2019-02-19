@@ -25,8 +25,8 @@ Este documento captura la arquitectura del caso de estudio Servidor Http 1.1 y e
 
 
 | **#** | **Descripción del Requerimiento No Funcional**  |
+| - |---------------------------------------------------------------------------------------------------|
 | 1 | El sistema deberá ser eficiente, deberá soportar por lo menos 50 transacciones por segundo |
-|   ||
 | 2 | El código del sistema debe ser bien organizado y legible |
 | 3 | El sistema deberá ser mantenible en el tiempo |
   
