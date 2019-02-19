@@ -41,7 +41,9 @@ Ante cualquier fallo en el sistema este deberá ser de fácil identificación pa
 La estrategia de la solución por la cual se optó tras el análisis realizado para crear el servidor HTTP vr 1.1 es utilizar el lenguaje de programación XXX ya que con este lenguaje podemos tener un desarrollo ágil y sencillo, enfocándonos en la facilidad del codigo de estar organizado y legible para que cualquier persona pueda entenderlo
 
 ## **VISTA DE ALTO NIVEL**
-<img align="center" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
+<img align="center" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png" >
+<p>
+
 ## **DIAGRAMA DE FLUJO**
 <img align="left" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
 ## **DIAGRAMA DE CLASES**
