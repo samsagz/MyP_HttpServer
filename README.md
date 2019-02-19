@@ -13,11 +13,8 @@ Este documento captura la arquitectura del caso de estudio Servidor Http 1.1 y e
 
 **Requerimientos Funcionales del caso de estudio**
 
-1. El sistema debe de cumplir con el estándar HTTP/1.1 de 1999
-2. El sistema debe de almacenar en un log todas las solicitudes hechas, sean correctas o incorrectas
-3. El sistema debe de analizar la ruta ingresada y responder 200 si la ruta está correcta o 400 si la ruta no se encuentra o si hay algún error en ella.El sistema debe de controlar dos respuestas, OK con código 200 o Not Found 404
 
-| # | Descripción del Requerimiento Funcional  |
+| **#** | **Descripción del Requerimiento Funcional**  |
 | - |---------------------------------------------------------------------------------------------------|
 | 1 | El sistema debe de cumplir con el estándar HTTP/1.1 de 1999 |
 | 2 | El sistema debe de almacenar en un log todas las solicitudes hechas, sean correctas o incorrectas |
@@ -26,16 +23,11 @@ Este documento captura la arquitectura del caso de estudio Servidor Http 1.1 y e
   
 **Requerimientos No Funcionales del caso de estudio**
 
-1. El sistema deberá ser eficiente, deberá soportar por lo menos 50 transacciones por segundo
-2. El código del sistema debe ser bien organizado y legible
-3. El sistema deberá ser mantenible en el tiempo
 
-| # | Descripción del Requerimiento No Funcional  |
-| - |--------------------------------------------------------------------------------------------|
+| **#** | **Descripción del Requerimiento No Funcional**  |
 | 1 | El sistema deberá ser eficiente, deberá soportar por lo menos 50 transacciones por segundo |
-| - |--------------------------------------------------------------------------------------------|
+|   ||
 | 2 | El código del sistema debe ser bien organizado y legible |
-| - |--------------------------------------------------------------------------------------------|
 | 3 | El sistema deberá ser mantenible en el tiempo |
   
 ## **METAS DE CALIDAD**
