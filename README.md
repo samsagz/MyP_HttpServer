@@ -84,7 +84,6 @@ Repositorio : [MyP_HttpServer]( https://github.com/samsagz/MyP_HttpServer )
 | UT003 | Verificar la escritura del log | Al momento de realizar una solicitud, se debe de crear un archivo .txt con la peticion y las caracteristicas de la misma |
 
 
-## **RIESGOS Y DEUDA TECNICA**
 ## **GLOSARIO**
 
 | TERMINO | DESCRIPCIÓN  |
