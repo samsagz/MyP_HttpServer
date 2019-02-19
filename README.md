@@ -78,7 +78,7 @@ Repositorio : [MyP_HttpServer]( https://github.com/samsagz/MyP_HttpServer )
 ## **CASOS DE PRUEBA**
 
 | **ID** | **NOMBRE DEL CASO DE PRUEBA**  | **OBJETIVOS DEL CASO DE PRUEBA**  |
-| :-: |:-------------------------------------| :--------------------------------------------------------------|
+| :-: |:--------------------------------------------------| :--------------------------------------------------------------|
 | UT001 | Validar estructura header | Validar que la estructura del header corresponda a la definida. |
 | UT002 | Verificar la respuesta de error | Al momento de no existir una url ingresada, responder correctamente con el mensaje 404 |
 | UT003 | Verificar la escritura del log | Al momento de realizar una solicitud, se debe de crear un archivo .txt con la peticion y las caracteristicas de la misma |
