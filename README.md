@@ -1,4 +1,4 @@
-#MyP_HttpServer
+# MyP_HttpServer 
 Servidor HTTP 1.1
 # UNIVERSIDAD EAFIT <h1>
 ### Realizado por : Ana Builes Arias - German Bedoya - Juan Fernando Zuluaga 
@@ -54,7 +54,7 @@ Adicional el servidor estará abierto en el puerto 8080.
 
 ## **RUTAS DEL CODIGO**
 
-Repositorio : [GitHub]( https://github.com/samsagz/MyP_HttpServer )
+Repositorio : [MyP_HttpServer]( https://github.com/samsagz/MyP_HttpServer )
 
 ## **REQUERIMIENTOS DE CALIDAD**
 ## **RIESGOS Y DEUDA TECNICA**
