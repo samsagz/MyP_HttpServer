@@ -85,4 +85,4 @@ Repositorio : [MyP_HttpServer]( https://github.com/samsagz/MyP_HttpServer )
 | Socket | Un socket (enchufe), es un método para la comunicación entre un programa del cliente y un programa del servidor en una red. Un socket se define como el punto final en una conexión. (http://www.masadelante.com/faqs/socket)|
 
 ## **BIBLIOGRAFIA**
-HTTP Server: Everything you need to know to Build a simple HTTP server from scratch(https://medium.com/from-the-scratch/http-server-what-do-you-need-to-know-to-build-a-simple-http-server-from-scratch-d1ef8945e4fa), Skrew Everything, Mar 16, 2018
+[HTTP Server: Everything you need to know to Build a simple HTTP server from scratch](https://medium.com/from-the-scratch/http-server-what-do-you-need-to-know-to-build-a-simple-http-server-from-scratch-d1ef8945e4fa), Skrew Everything, Mar 16, 2018
