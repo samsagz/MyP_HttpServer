@@ -31,6 +31,8 @@ En esta sección se hablará sobre los Atributos de Calidad objetivos en la arqu
 ### **ATRIBUTOS DE CALIDAD**
 **1. CONFIABILIDAD**
 El sistema debe ser tolerante a fallos.
+<p>
+  
 **2. MANTENIBILIDAD**
 Ante cualquier fallo en el sistema este deberá ser de fácil identificación para su reparación en el menor tiempo posible
   
@@ -47,17 +49,17 @@ La estrategia de la solución por la cual se optó tras el análisis realizado p
 ## **VISTA DE ALTO NIVEL**
 
 <img align="center" src="https://github.com/samsagz/MyP_HttpServer/blob/master/Diagramas/VistaDeAltoNivel.png" >
-<p><\p>
+<p>
 
 ## **DIAGRAMA DE FLUJO**
 
 <img align="center" src="https://github.com/samsagz/MyP_HttpServer/blob/master/Diagramas/DiagramaDeFlujo.png">
-<p><\p>
+<p>
   
 ## **DIAGRAMA DE CLASES**
 
 <img align="center" src="https://github.com/samsagz/MyP_HttpServer/blob/master/Diagramas/DiagramaDeClases.png">
-<p><\p>
+<p>
 
 ## **DECISIONES DE DISEÑO**
 
