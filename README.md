@@ -78,3 +78,9 @@ Repositorio : [MyP_HttpServer]( https://github.com/samsagz/MyP_HttpServer )
 ## **REQUERIMIENTOS DE CALIDAD**
 ## **RIESGOS Y DEUDA TECNICA**
 ## **GLOSARIO**
+
+| TERMINO | DESCRIPCIÓN  |
+| :-: |:---------------------------------------------------------------------------------------------------|
+| Http | Un servidor web brinda soporte para HTTP (Hypertext Transfer Protocol ó  Protocolo de Transferencia de Hipertexto). Como su nombre lo indica, HTTP especifica cómo transferir hypertext (es decir, documentos web vinculados) entre dos computadoras. Un protocolo es un conjunto de reglas para la comunicación entre dos computadoras. HTTP es un protocolo textual, sin estado. (https://developer.mozilla.org/es/docs/Learn/Common_questions/Que_es_un_servidor_WEB) |
+| Socket | Un socket (enchufe), es un método para la comunicación entre un programa del cliente y un programa del servidor en una red. Un socket se define como el punto final en una conexión. (http://www.masadelante.com/faqs/socket)|
+
