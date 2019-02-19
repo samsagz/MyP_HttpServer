@@ -47,12 +47,12 @@ La estrategia de la solución por la cual se optó tras el análisis realizado p
 
 ## **DIAGRAMA DE FLUJO**
 
-<img align="left" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
+<img align="center" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
 <p>
   
 ## **DIAGRAMA DE CLASES**
 
-<img align="right" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
+<img align="center" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
 <p>
 
 ## **DECISIONES DE DISEÑO**
