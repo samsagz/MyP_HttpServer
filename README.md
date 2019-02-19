@@ -3,6 +3,7 @@ Servidor HTTP 1.1
 
 # UNIVERSIDAD EAFIT <h1>
 ### Realizado por : Ana Builes Arias - German Bedoya - Juan Fernando Zuluaga 
+  
 <p style="text-align: justify;">
 Este documento es una descripción de arquitectura (AD) para el proyecto caso de estudio Servidor Http 1.1. Está descripcion de arquitectura intenta dar algunos ejemplos de la arquitectura del caso de estudio y como los diferentes componentes de está se relacionan entre sí.
 
@@ -38,7 +39,6 @@ En esta sección se hablará sobre los Atributos de Calidad objetivos en la arqu
 <p style="text-align: justify;">
 El sistema debe ser tolerante a fallos.
 **2. MANTENIBILIDAD**
-<p style="text-align: justify;">
 Ante cualquier fallo en el sistema este deberá ser de fácil identificación para su reparación en el menor tiempo posible
 <\p>
   
@@ -59,17 +59,17 @@ La estrategia de la solución por la cual se optó tras el análisis realizado p
 ## **VISTA DE ALTO NIVEL**
 
 <img align="center" src="https://github.com/samsagz/MyP_HttpServer/blob/master/Diagramas/VistaDeAltoNivel.png" >
-<p>
+<p><\p>
 
 ## **DIAGRAMA DE FLUJO**
 
 <img align="center" src="https://github.com/samsagz/MyP_HttpServer/blob/master/Diagramas/DiagramaDeFlujo.png">
-<p>
+<p><\p>
   
 ## **DIAGRAMA DE CLASES**
 
 <img align="center" src="https://github.com/samsagz/MyP_HttpServer/blob/master/Diagramas/DiagramaDeClases.png">
-<p>
+<p><\p>
 
 ## **DECISIONES DE DISEÑO**
 <p style="text-align: justify;">
@@ -80,6 +80,7 @@ El servidor contará con dos tipos de verbos GET y POST. También incluirá las 
 
 Adicional el servidor estará abierto en el puerto 8080.
 <\p>
+
 ## **RUTAS DEL CODIGO**
 
 Repositorio : [MyP_HttpServer]( https://github.com/samsagz/MyP_HttpServer )
