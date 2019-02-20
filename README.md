@@ -45,7 +45,7 @@ Ante cualquier fallo en el sistema este deberá ser de fácil identificación pa
   
 ## **ESTRATEGIA DE LA SOLUCIÓN**
 
-La estrategia de la solución por la cual se optó tras el análisis realizado para crear el servidor HTTP vr 1.1 es utilizar el lenguaje de programación C# ya que con este lenguaje podemos tener un desarrollo ágil y sencillo, enfocándonos en la facilidad del codigo para estar organizado y legible para que cualquier persona pueda entenderlo. Además, se considera que este lenguaje de programación tiene una curva de aprendizaje menos pronunciada debido a que en el equipo de desarrollo tiene dominio en este lenguaje.
+La estrategia de la solución por la cual se optó tras el análisis realizado para crear el servidor HTTP vr 1.1 es utilizar el lenguaje de programación C# ya que con este lenguaje podemos tener un desarrollo ágil y sencillo, enfocándonos en la facilidad del codigo para estar organizado y legible para que cualquier persona pueda entenderlo. Además, se considera que este lenguaje de programación tiene una curva de aprendizaje menos pronunciada debido a que el equipo de desarrollo tiene dominio en este lenguaje.
   
 ## **VISTA DE ALTO NIVEL**
 
