@@ -16,7 +16,7 @@ Este documento captura la arquitectura del caso de estudio Servidor Http 1.1 y e
 | :-: |:---------------------------------------------------------------------------------------------------|
 | 1 | El sistema debe de cumplir con el estándar HTTP/1.1 de 1999 |
 | 2 | El sistema debe de almacenar en un log todas las solicitudes hechas, sean correctas o incorrectas |
-| 3 | El sistema debe de analizar la ruta ingresada y responder 200 si la ruta está correcta o 400 si la ruta no se encuentra o si hay algún error en ella |
+| 3 | El sistema debe de analizar la ruta ingresada y responder 200 si la ruta está correcta o 404 si la ruta no se encuntra |
 
   
 | **#** | **Descripción de los Requerimientos No Funcionales**  |
