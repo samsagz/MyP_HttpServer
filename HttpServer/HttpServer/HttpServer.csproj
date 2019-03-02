@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\EHeaders.cs" />
     <Compile Include="Enums\EMethod.cs" />
     <Compile Include="Enums\EStatusCode.cs" />
+    <Compile Include="Enums\EnumUtils.cs" />
     <Compile Include="HttpRequestMessage.cs" />
     <Compile Include="HttpResponseMessage.cs" />
     <Compile Include="Program.cs" />

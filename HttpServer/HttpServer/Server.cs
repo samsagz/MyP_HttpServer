@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HttpServer.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -61,15 +62,11 @@ namespace HttpServer
 
             //pasan cosas para convertirlo en el HTML
             //request.RequestURI
-            var headers = new Dictionary<string, string>();
-            headers.Add("Cache-Control", "max-age=604800");
-            headers.Add("Content-Type", "text/html; charset=UTF-8");
-            headers.Add("Date", "Sat, 02 Mar 2019 16:33:52 GMT");
-            headers.Add("Etag", "\"1541025663 + ident + gzip\"");
-            headers.Add("Expires", "Sat, 09 Mar 2019 16:33:52 GMT");
+            var headers = new Dictionary<EHeaders, string>();
+           
             
 
-            string response = new HttpResponseMessage(request.HTTPVersion, Enums.EStatusCode.Accepted, string.Empty, headers, "HTML PURO Y DURO").GenerateHttpResponse();
+            string response = new HttpResponseMessage(request.HTTPVersion, EStatusCode.Accepted, string.Empty, headers, "HTML PURO Y DURO").GenerateHttpResponse();
 
             Program.AddLog(response);
 
