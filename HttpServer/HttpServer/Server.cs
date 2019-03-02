@@ -64,7 +64,7 @@ namespace HttpServer
             //request.RequestURI
             var headers = new Dictionary<EHeaders, string>();
            
-            
+            //TODO: Interpretar URI, si existe cargar el HTML como string
 
             string response = new HttpResponseMessage(request.HTTPVersion, EStatusCode.Accepted, string.Empty, headers, "HTML PURO Y DURO").GenerateHttpResponse();
 
