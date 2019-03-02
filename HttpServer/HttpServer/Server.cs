@@ -57,20 +57,23 @@ namespace HttpServer
             String data = Encoding.ASCII.GetString(RecivedBytes);
             Program.AddLog(data);
 
-            String response = String.Format("{0}{11}{1}{11}{2}{11}{3}{11}{4}{11}{5}{11}{6}{11}{7}{11}{8}{11}{9}{11}{11}{10}{11}",
-                "HTTP/1.1 308 Permanent Redirect",
-                "Date: Sun, 17 Feb 2019 02:25:19 GMT",
-                "Transfer - Encoding: chunked",
-                "  Connection: keep - alive",
-                "Cache - Control: max - age = 3600",
-                "Expires: Sun, 17 Feb 2019 03:25:19 GMT",
-                "Location: http://www.holamundo.com",
-                "        Vary: Accept - Encoding",
-                "Server: cloudflare",
-                "CF - RAY: 4aa4cd7e8e49b937 - MIA",
-                "<h1>estado OK</h1>", Environment.NewLine);
+            HttpRequestMessage request = new HttpRequestMessage(data);
 
-            Byte[] responseBytes = Encoding.ASCII.GetBytes(response);
+            //pasan cosas para convertirlo en el HTML
+            //request.RequestURI
+            var headers = new Dictionary<string, string>();
+            headers.Add("Cache-Control", "max-age=604800");
+            headers.Add("Content-Type", "text/html; charset=UTF-8");
+            headers.Add("Date", "Sat, 02 Mar 2019 16:33:52 GMT");
+            headers.Add("Etag", "\"1541025663 + ident + gzip\"");
+            headers.Add("Expires", "Sat, 09 Mar 2019 16:33:52 GMT");
+            
+
+            string response = new HttpResponseMessage(request.HTTPVersion, Enums.EStatusCode.Accepted, string.Empty, headers, "HTML PURO Y DURO").GenerateHttpResponse();
+
+            Program.AddLog(response);
+
+            byte[] responseBytes = Encoding.ASCII.GetBytes(response);
             client.BeginSend(responseBytes, 0, responseBytes.Length, SocketFlags.None, new AsyncCallback(SendCallback), client);
 
 

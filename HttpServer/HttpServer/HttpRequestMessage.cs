@@ -14,6 +14,7 @@ namespace HttpServer
         public string RequestURI { get; set; }
         public string HTTPVersion { get; set; }
         #endregion
+
         public Dictionary<string,string> Headers { get; set; }
         public string MessageBody { get; set; }
 
