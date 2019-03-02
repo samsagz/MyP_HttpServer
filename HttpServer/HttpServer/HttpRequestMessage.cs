@@ -17,8 +17,11 @@ namespace HttpServer
         public Dictionary<string,string> Headers { get; set; }
         public string MessageBody { get; set; }
 
+        
         public HttpRequestMessage(string request)
         {
         }
+
+
     }
 }
