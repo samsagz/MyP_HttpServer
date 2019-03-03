@@ -23,20 +23,18 @@ namespace HttpServer
         {
             string name = DateTime.Now.Millisecond.ToString();
 
-            //if (!File.Exists(".\\log"))
-            //    File.Create(".\\log");
+            if (!Directory.Exists(".\\log"))
+                Directory.CreateDirectory(".\\log");
 
             Console.WriteLine(v);
             try
             {
                 File.WriteAllText(".\\log\\log" + name + ".txt", v);
-
             }
             catch (Exception e)
             {
                 name += 1;
-                File.WriteAllText(".\\log\\log" + name + ".txt", v);
-
+                File.WriteAllText(".\\log\\log" + name + new Random().Next(0, 1000) + ".txt", v);
             }
         }
     }
