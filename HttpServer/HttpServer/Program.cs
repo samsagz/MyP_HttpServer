@@ -15,13 +15,29 @@ namespace HttpServer
             Console.WriteLine("Iniciando servidor");
             Server server = null;
             server = new Server(null);
-            
+
             Console.ReadLine();
         }
 
         public static void AddLog(string v)
         {
+            string name = DateTime.Now.Millisecond.ToString();
+
+            //if (!File.Exists(".\\log"))
+            //    File.Create(".\\log");
+
             Console.WriteLine(v);
+            try
+            {
+                File.WriteAllText(".\\log\\log" + name + ".txt", v);
+
+            }
+            catch (Exception e)
+            {
+                name += 1;
+                File.WriteAllText(".\\log\\log" + name + ".txt", v);
+
+            }
         }
     }
 }
