@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConstructMessage.cs" />
     <Compile Include="Enums\EHeaders.cs" />
     <Compile Include="Enums\EMethod.cs" />
     <Compile Include="Enums\EStatusCode.cs" />

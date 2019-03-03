@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.IO;
+
 namespace HttpServer
 {
     class Program
@@ -13,6 +15,9 @@ namespace HttpServer
             Console.WriteLine("Iniciando servidor");
             Server server = null;
             server = new Server(null);
+
+            //var html = File.ReadAllText(".\\html\\holamundo.html", Encoding.UTF8);
+            //AddLog(html);
 
             Console.ReadLine();
         }

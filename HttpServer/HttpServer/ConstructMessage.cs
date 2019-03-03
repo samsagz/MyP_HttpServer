@@ -1,6 +1,7 @@
 ﻿using HttpServer.Enums;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace HttpServer
     {
         public static HttpResponseMessage ConstructResponseMessage(string httpVersion, string uri)
         {
-            HttpResponseMessage response; //= new HttpResponseMessage();
+            HttpResponseMessage response;
             EStatusCode status;
             var headers = new Dictionary<EHeaders, string>();
             string messageBody = string.Empty;
@@ -31,7 +32,9 @@ namespace HttpServer
                 headers.Add(EHeaders.xcache, "HIT");
                 headers.Add(EHeaders.contentlength, "1270");
 
-                //TODO: leer html
+                //string uriPath = string.Format("{1}/html{0}", uri,Directory.GetCurrentDirectory()).Replace("/","\\");
+                string uriPath = string.Format("./html{0}", uri).Replace("/","\\");
+                messageBody = File.ReadAllText(uriPath,Encoding.UTF8);
             }
             catch (Exception)
             {

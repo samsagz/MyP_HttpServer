@@ -60,43 +60,9 @@ namespace HttpServer
 
             HttpRequestMessage request = new HttpRequestMessage(data);
 
-            //pasan cosas para convertirlo en el HTML
-            //request.RequestURI
-            
-
-            //metodo(request.RequestURI)
-
-
-
-
-
-
-
-
-
-            /*
-             *            
-            HTTP / 1.1 200 OK
-            Accept-Ranges: bytes
-            Cache-Control: max-age = 604800
-            Content-Type: text/html; charset = UTF-8
-            Date: Sun, 03 Mar 2019 14:08:46 GMT
-            Etag: "1541025663"
-            Expires: Sun, 10 Mar 2019 14:08:46 GMT
-            Last-Modified: Fri, 09 Aug 2013 23:54:35 GMT
-            Server: ECS(mic/9AF5)
-            Vary: Accept-Encoding
-            X-Cache: HIT
-            Content-Length: 1270
-
-            */
-
-
-
-           
             //TODO: Interpretar URI, si existe cargar el HTML como string
-
-            string response = new HttpResponseMessage(request.HTTPVersion, EStatusCode.Accepted, string.Empty, request.Headers, "HTML PURO Y DURO").GenerateHttpResponse();
+            HttpResponseMessage httpResponse = ConstructMessage.ConstructResponseMessage(request.HTTPVersion, request.RequestURI);
+            string response = httpResponse.GenerateHttpResponse();
 
             Program.AddLog(response);
 
