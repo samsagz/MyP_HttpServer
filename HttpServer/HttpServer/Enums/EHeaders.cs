@@ -8,7 +8,7 @@ namespace HttpServer.Enums
 {
     enum EHeaders
     {
-        [StringValue("Accept")]
+ [StringValue("Accept")]
         accept,
         [StringValue("Accept-Charset")]
         acceptcharset,
@@ -49,8 +49,28 @@ namespace HttpServer.Enums
         [StringValue("Connection")]
         connection,
         [StringValue("Cache-Control")]
-        cachecontrol
-
-
+        cachecontrol,
+        [StringValue("Accept-Ranges")]
+        acceptranges,
+        [StringValue("Cache-Type")]
+        cachetype,
+        [StringValue("Content-Type")]
+        contenttype,
+        [StringValue("Date")]
+        date,
+        [StringValue("Etag")]
+        etag,
+        [StringValue("expires")]
+        expires,
+        [StringValue("Last-Modified")]
+        lastmodified,
+        [StringValue("Server")]
+        server,
+        [StringValue("Vary")]
+        vary,
+        [StringValue("X-Cache")]
+        xcache,
+        [StringValue("Content-Length")]
+        contentlength
     }
 }

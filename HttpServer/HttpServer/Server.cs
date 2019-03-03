@@ -62,11 +62,52 @@ namespace HttpServer
 
             //pasan cosas para convertirlo en el HTML
             //request.RequestURI
-            var headers = new Dictionary<EHeaders, string>();
+            
+
+             var headers = new Dictionary<EHeaders, string>();
+
+
+            headers.Add(EHeaders.acceptranges, "bytes");
+            headers.Add(EHeaders.cachecontrol, "max-age = 604800");
+            headers.Add(EHeaders.contenttype, "text/html; charset = UTF-8");
+            headers.Add(EHeaders.date, "Sun, 03 Mar 2019 14:08:46 GMT");
+            headers.Add(EHeaders.etag, "1541025663");
+            headers.Add(EHeaders.expires, "Sun, 10 Mar 2019 14:08:46 GMT");
+            headers.Add(EHeaders.lastmodified, "Fri, 09 Aug 2013 23:54:35 GMT");
+            headers.Add(EHeaders.server, "ECS(mic/9AF5)");
+            headers.Add(EHeaders.vary, "Accept-Encoding");
+            headers.Add(EHeaders.xcache, "HIT");
+            headers.Add(EHeaders.contentlength, "1270");
+
+
+
+
+
+
+
+            /*
+             *            
+            HTTP / 1.1 200 OK
+            Accept-Ranges: bytes
+            Cache-Control: max-age = 604800
+            Content-Type: text/html; charset = UTF-8
+            Date: Sun, 03 Mar 2019 14:08:46 GMT
+            Etag: "1541025663"
+            Expires: Sun, 10 Mar 2019 14:08:46 GMT
+            Last-Modified: Fri, 09 Aug 2013 23:54:35 GMT
+            Server: ECS(mic/9AF5)
+            Vary: Accept-Encoding
+            X-Cache: HIT
+            Content-Length: 1270
+
+            */
+
+
+
            
             //TODO: Interpretar URI, si existe cargar el HTML como string
 
-            string response = new HttpResponseMessage(request.HTTPVersion, EStatusCode.Accepted, string.Empty, headers, "HTML PURO Y DURO").GenerateHttpResponse();
+            string response = new HttpResponseMessage(request.HTTPVersion, EStatusCode.Accepted, string.Empty, request.Headers, "HTML PURO Y DURO").GenerateHttpResponse();
 
             Program.AddLog(response);
 
