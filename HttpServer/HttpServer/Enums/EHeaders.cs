@@ -71,6 +71,11 @@ namespace HttpServer.Enums
         [StringValue("X-Cache")]
         xcache,
         [StringValue("Content-Length")]
-        contentlength
+        contentlength,
+        [StringValue("Location")]
+        location,
+        [StringValue("Keep-Alive")]
+        keepalive
+
     }
 }
