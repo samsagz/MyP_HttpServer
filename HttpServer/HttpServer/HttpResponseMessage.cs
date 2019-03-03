@@ -33,9 +33,11 @@ namespace HttpServer
 
             foreach (var item in Headers)
             {
-                response += string.Format("{0}{4}{1}{4}{2}{3}",
-                item.Key, item.Value, Environment.NewLine, " ", ":");
+                response += string.Format("{0}{4}{3}{1}{2}",
+                item.Key.GetStringValue(), item.Value, Environment.NewLine, " ", ":");
             }
+
+            response += Environment.NewLine; 
 
             response += MessageBody;
             

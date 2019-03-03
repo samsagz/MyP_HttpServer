@@ -15,10 +15,7 @@ namespace HttpServer
             Console.WriteLine("Iniciando servidor");
             Server server = null;
             server = new Server(null);
-
-            //var html = File.ReadAllText(".\\html\\holamundo.html", Encoding.UTF8);
-            //AddLog(html);
-
+            
             Console.ReadLine();
         }
 

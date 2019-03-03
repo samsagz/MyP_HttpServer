@@ -8,7 +8,7 @@ namespace HttpServer.Enums
 {
     enum EHeaders
     {
- [StringValue("Accept")]
+        [StringValue("Accept")]
         accept,
         [StringValue("Accept-Charset")]
         acceptcharset,

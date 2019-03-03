@@ -12,25 +12,27 @@ namespace HttpServer
     {
         public static HttpResponseMessage ConstructResponseMessage(string httpVersion, string uri)
         {
+            string error404 = "/ProyectoHttp/error404.html";
+
             HttpResponseMessage response;
             EStatusCode status;
-            var headers = new Dictionary<EHeaders, string>();
+            Dictionary<EHeaders, string> headers; 
             string messageBody = string.Empty;
             try
             {
                 status = EStatusCode.OK;
 
-                headers.Add(EHeaders.acceptranges, "bytes");
-                headers.Add(EHeaders.cachecontrol, "max-age = 604800");
-                headers.Add(EHeaders.contenttype, "text/html; charset=UTF-8");
-                headers.Add(EHeaders.date, DateTime.Now.ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’")); 
-                headers.Add(EHeaders.etag, "1541025663");
-                headers.Add(EHeaders.expires, DateTime.Now.AddDays(7).ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’"));
-                headers.Add(EHeaders.lastmodified, "Fri, 09 Aug 2013 23:54:35 GMT");
-                headers.Add(EHeaders.server, "ECS(mic/9AF5)");
-                headers.Add(EHeaders.vary, "Accept-Encoding");
-                headers.Add(EHeaders.xcache, "HIT");
-                headers.Add(EHeaders.contentlength, "1270");
+                headers = new Dictionary<EHeaders, string>
+                {
+                    { EHeaders.acceptranges, "bytes" },
+                    { EHeaders.cachecontrol, "max-age = 604800" },
+                    { EHeaders.contenttype, "text/html; charset=UTF-8" },
+                    { EHeaders.date, DateTime.Now.ToString("ddd, dd MMM yyy HH:mm:ss GMT").Replace(".", "") },
+                    { EHeaders.expires, DateTime.Now.AddDays(7).ToString("ddd, dd MMM yyy HH:mm:ss GMT").Replace(".", "") },
+                    { EHeaders.lastmodified, "Fri, 09 Aug 2013 23:54:35 GMT" },
+                    { EHeaders.vary, "Accept-Encoding" },
+                    { EHeaders.xcache, "HIT" }
+                };
 
                 //string uriPath = string.Format("{1}/html{0}", uri,Directory.GetCurrentDirectory()).Replace("/","\\");
                 string uriPath = string.Format("./html{0}", uri).Replace("/","\\");
@@ -39,28 +41,18 @@ namespace HttpServer
             catch (Exception)
             {
                 status = EStatusCode.NotFound;
+                headers = new Dictionary<EHeaders, string>
+                {
+                    { EHeaders.date, DateTime.Now.ToString("ddd, dd MMM yyy HH:mm:ss GMT").Replace(".", "") },
+                    { EHeaders.server, "ServerMelo" },
+                    { EHeaders.location, uri },
+                    { EHeaders.keepalive, "timeout=3, max=100" },
+                    { EHeaders.connection, "Keep-Alive" },
+                    { EHeaders.contenttype, "text/html; charset=UTF-8" }
+                };
 
-                headers.Add(EHeaders.date, DateTime.Now.ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’"));
-                headers.Add(EHeaders.server, "ServerMelo");
-                headers.Add(EHeaders.location, uri);
-                headers.Add(EHeaders.contentlength, "1270");
-                headers.Add(EHeaders.keepalive, "timeout=3, max=100");
-                headers.Add(EHeaders.connection, "Keep-Alive");
-                headers.Add(EHeaders.contenttype, "text/html; charset=UTF-8");
-
-
-                /*
-                HTTP/1.1 301 Moved Permanently
-                Date: Sun, 03 Mar 2019 15:22:04 GMT
-                Server: Apache
-                Location: http://exampleq.com/sds
-                Content-Length: 231
-                Keep-Alive: timeout=3, max=100
-                Connection: Keep-Alive
-                Content-Type: text/html; charset=iso-8859-1
-                
-                 */
-
+                string uriPath = string.Format("./html{0}", error404).Replace("/", "\\");
+                messageBody = File.ReadAllText(uriPath, Encoding.UTF8);
             }
 
             response = new HttpResponseMessage(httpVersion, status, string.Empty, headers, messageBody);
