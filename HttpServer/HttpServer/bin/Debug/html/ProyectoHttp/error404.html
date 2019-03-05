@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      
+	  <style type="text/css">
+			@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+			/* BODY */
+			@-webkit-keyframes moving-panel {
+				100% {
+					-webkit-transform: scale(1, 1) translate(20px, 0);
+					transform: scale(1, 1) translate(20px, 0);
+				}
+			}
+
+			@keyframes moving-panel {
+				100% {
+					-webkit-transform: scale(1, 1) translate(20px, 0);
+					transform: scale(1, 1) translate(20px, 0);
+				}
+			}
+
+			/* Other stuff */
+			html, body {
+				height: 100%;
+			}
+
+			body {
+				background: #EEE;
+				font: 5.5em/1 Open Sans, Impact;
+				text-transform: uppercase;
+			}
+
+			::selection {
+				background: transparent;
+			}
+
+			h1 {
+				cursor: default;
+				position: absolute;
+				top: 30px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 50px;
+				margin: auto;
+				display: block;
+				
+				-webkit-animation: bounce .3s ease infinite alternate;
+				
+				font-family: 'Open Sans', cursive;
+				font-size: 80px;
+				color: darkslategray;
+				text-align: center;
+				line-height: 100px;
+				text-shadow: 0 1px 0 #CCC,
+										0 2px 0 #CCC,
+										0 3px 0 #CCC,
+										0 4px 0 #CCC,
+										0 5px 0 #CCC,
+										0 6px 0 transparent,
+										0 7px 0 transparent,
+										0 8px 0 transparent,
+										0 9px 0 transparent,
+										0 10px 10px rgba(0, 0, 0, .6);
+			}
+			/* ANIMATION */
+			@-webkit-keyframes bounce {
+				100% {
+					top: -30px;
+					
+					text-shadow: 0 1px 0 #CCC,
+											0 2px 0 #CCC,
+											0 3px 0 #CCC,
+											0 4px 0 #CCC,
+											0 5px 0 #CCC,
+											0 6px 0 #CCC,
+											0 7px 0 #CCC,
+											0 8px 0 #CCC,
+											0 9px 0 #CCC,
+											0 30px 30px rgba(0, 0, 0, .3);
+				}
+			}
+
+			.color-nav {
+				background-color: #1da1f2;
+			}
+			/* Main styles */
+			@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+			.text--transparent {
+				fill: transparent;
+			}
+
+
+			.anim-shape {
+				-webkit-transform-origin: 0x 150px;
+				-ms-transform-origin: 0x 150px;
+				transform-origin: 0x 150px;
+				-webkit-transform: scale(0, 1) translate(0, 0);
+				-ms-transform: scale(0, 1) translate(0, 0);
+				transform: scale(0, 1) translate(0, 0);
+				-webkit-animation: moving-panel 3s infinite alternate;
+				animation: moving-panel 3s infinite alternate;
+			}
+
+			.colortext .anim-shape:nth-child(1) {
+				fill: #0E1826;
+			}
+
+			.colortext .anim-shape:nth-child(2) {
+				fill: #166973;
+			}
+
+			.colortext .anim-shape:nth-child(3) {
+				fill: #65BFA6;
+			}
+
+			.colortext .anim-shape:nth-child(4) {
+				fill: #F2CD5C;
+			}
+
+			.colortext .anim-shape:nth-child(5) {
+				fill: #F26444;
+			}
+
+			.colortext .anim-shape:nth-child(6) {
+				fill: #E74C3C;
+			}
+
+
+			.shadow {
+				-webkit-transform: translate(10px, 10px);
+				-ms-transform: translate(10px, 10px);
+				transform: translate(10px, 10px);
+			}
+
+			.anim-shape--shadow {
+				fill: #000;
+				fill-opacity: .2;
+			}
+
+			svg {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			</style>  
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+	
+	<nav class="color-nav">
+	  <div class="nav-wrapper">
+		<a href="" class="brand-logo" style="margin-left: 20px;"> Server 404 Http 1.1</a>
+		<ul id="nav-mobile" class="right hide-on-med-and-down">
+		  <li><a href="index.html"> Inicio</a></li>
+		  <li><a href="error404.html"> Error 404</a></li>
+		</ul>
+	  </div>
+	</nav>
+	
+	<svg viewBox="0 0 800 300">
+
+	  <!-- Symbol with text -->
+	  <symbol id="s-text">
+		<text text-anchor="middle"
+			  x="50%"
+			  y="50%"
+			  dy=".35em"
+			  class="text--line"
+			  >
+		  Text
+		</text>    
+	  </symbol>
+
+	  <!-- Clippath  with text -->
+	  <clippath id="cp-text">
+		<text text-anchor="middle"
+			  x="50%"
+			  y="50%"
+			  dy=".35em"
+			  class="text--line"
+			  >
+		  Error 404
+		</text>
+	  </clippath>
+
+	  <!-- Group for shadow -->
+	  <g clip-path="url(#cp-text)" class="shadow">
+		<rect
+			  width="100%"
+			  height="100%"         
+			  class="anim-shape anim-shape--shadow"
+			  ></rect>
+	  </g>
+
+	  <!-- Group with clippath for text-->
+	  <g clip-path="url(#cp-text)" class="colortext">
+		<!-- Animated shapes inside text -->
+		<rect
+			  width="100%"
+			  height="100%"         
+			  class="anim-shape"
+			  ></rect>
+		<rect
+			  width="84%"
+			  height="100%"         
+			  class="anim-shape"
+			  ></rect>
+		<rect
+			  width="68%"
+			  height="100%"         
+			  class="anim-shape"
+			  ></rect>
+		<rect
+			  width="52%"
+			  height="100%"         
+			  class="anim-shape"
+			  ></rect>
+		<rect
+			  width="36%"
+			  height="100%"         
+			  class="anim-shape"
+			  ></rect>
+		<rect
+			  width="20%"
+			  height="100%"         
+			  class="anim-shape"
+			  ></rect>
+	  </g>
+
+	  <!-- Transparent copy of text to keep
+			 patterned text selectable -->
+	  <use xlink:href="#s-text"
+		   class="text--transparent"></use>
+
+	</svg>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    </body>
+  </html>

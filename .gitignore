@@ -1,7 +1,8 @@
 
 HttpServer/.vs/
 HttpServer/HttpServer/obj/
-HttpServer/HttpServer/bin/
 HttpServer/UnitTestHttpServer/obj/
 HttpServer/UnitTestHttpServer/bin/
 .DS_Store
+HttpServer/HttpServer/bin/Debug/log.txt
+HttpServer/HttpServer/bin/Debug/log/
