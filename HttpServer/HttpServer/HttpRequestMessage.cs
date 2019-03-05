@@ -25,7 +25,17 @@ namespace HttpServer
             var lineas = request.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
             var RequestLine = lineas[0].Split(' ');
-            Method = (EMethod)Enum.Parse(typeof(EMethod), RequestLine[0]);  
+
+            try
+            {
+                Method = (EMethod)Enum.Parse(typeof(EMethod), RequestLine[0]);
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception("RequestLine, Metodo no detectado");
+            }
+              
             RequestURI = RequestLine[1];
             HTTPVersion = RequestLine[2];
 

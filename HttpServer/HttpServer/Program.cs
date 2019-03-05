@@ -21,6 +21,8 @@ namespace HttpServer
 
         public static void AddLog(string v)
         {
+
+            /*
             string name = DateTime.Now.Millisecond.ToString();
 
             if (!Directory.Exists(".\\log"))
@@ -34,8 +36,9 @@ namespace HttpServer
             catch (Exception e)
             {
                 name += 1;
-                File.WriteAllText(".\\log\\log" + name + new Random().Next(0, 1000) + ".txt", v);
+               // File.WriteAllText(".\\log\\log" + name + new Random().Next(0, 1000) + ".txt", v);
             }
+            */
         }
     }
 }
