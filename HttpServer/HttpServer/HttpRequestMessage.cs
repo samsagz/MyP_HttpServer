@@ -30,9 +30,8 @@ namespace HttpServer
             {
                 Method = (EMethod)Enum.Parse(typeof(EMethod), RequestLine[0]);
             }
-            catch (Exception e)
+            catch (Exception)
             {
-
                 throw new Exception("RequestLine, Metodo no detectado");
             }
               
