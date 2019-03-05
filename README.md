@@ -59,7 +59,7 @@ La estrategia de la solución por la cual se optó tras el análisis realizado p
   
 ## **DIAGRAMA DE CLASES**
 
-<img align="center" src="https://github.com/samsagz/MyP_HttpServer/blob/master/Diagramas/DiagramaDeClases.png">
+<img align="center" src="https://github.com/samsagz/MyP_HttpServer/blob/master/Diagramas/DiagramaDeClases.jpg">
 <p>
 
 ## **DECISIONES DE DISEÑO**
