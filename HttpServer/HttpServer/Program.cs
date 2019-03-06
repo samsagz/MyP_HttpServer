@@ -10,19 +10,29 @@ namespace HttpServer
 {
     class Program
     {
+
+
+        /// <summary>
+        /// Metodo Main: inicializador de la ejecucion, el cual crea una intancia de un Server
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             Console.WriteLine("Iniciando servidor");
             Server server = null;
-            server = new Server(null);
+            server = new Server();
 
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Metodo AddLog : Crea y escribe el log del estado del servidor en archivos TXT
+        /// </summary>
+        /// <param name="v"></param>
         public static void AddLog(string v)
         {
 
-            /*
+            
             string name = DateTime.Now.Millisecond.ToString();
 
             if (!Directory.Exists(".\\log"))
@@ -36,9 +46,9 @@ namespace HttpServer
             catch (Exception e)
             {
                 name += 1;
-               // File.WriteAllText(".\\log\\log" + name + new Random().Next(0, 1000) + ".txt", v);
+                File.WriteAllText(".\\log\\log" + name + new Random().Next(0, 1000) + ".txt", v);
             }
-            */
+            
         }
     }
 }

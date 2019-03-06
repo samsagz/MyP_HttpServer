@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HttpServer.Enums
 {
+    /// <summary>
+    /// Enums de estatus Code 
+    /// </summary>
     enum EStatusCode
     {
         [StringValue("100 Continue")]

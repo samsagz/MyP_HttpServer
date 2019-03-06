@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HttpServer
 {
-
+    
 
     class Server
     {
@@ -21,13 +21,24 @@ namespace HttpServer
 
         //8private Program context = null;
 
-        public Server(Program cntxt)
+
+        /// <summary>
+        /// Metodo Server: inicializador del Socket
+        /// </summary>
+        public Server()
         {
             //context = cntxt;
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             Start();
         }
 
+
+     
+
+        /// <summary>
+        /// Metodo Start: Metodo en el cual el servidor estará a la espera de una comunicación con un cliente. Se define el puerto
+        ///              y la ip donde se puede establcer una conexión
+        /// </summary>
         public void Start()
         {
             serverSocket.Bind(new IPEndPoint(IPAddress.Any, port));
@@ -35,11 +46,21 @@ namespace HttpServer
             Accept();
         }
 
+
+
+        /// <summary>
+        /// Metodo Accept: Metodo en el cual el servidor aceptará una conexión entrante, se suscribe el servidor a un evento 
+        ///               para recibir una conexion entrante.
+        /// </summary>
         public void Accept()
         {
             serverSocket.BeginAccept(new AsyncCallback(AcceptCallback), null);
         }
 
+        /// <summary>
+        /// Metodo AcceptCallBack: Metodo en el cual se recibe la solicitud desde cliente y se atiende
+        /// </summary>
+        /// <param name="ar"></param>
         private void AcceptCallback(IAsyncResult ar)
         {
             Socket client = serverSocket.EndAccept(ar);
@@ -49,6 +70,12 @@ namespace HttpServer
             Program.AddLog(ar.ToString());
         }
 
+
+        /// <summary>
+        /// Metodo ReciveCallBack: Metodo en el cual el servidor recibe la señal del cliente, se genera el contenido para la respuesta
+        ///                       y se envia
+        /// </summary>
+        /// <param name="ar"></param>
         private void ReciveCallback(IAsyncResult ar)
         {
             Socket client = (Socket)ar.AsyncState;
@@ -72,6 +99,10 @@ namespace HttpServer
 
         }
 
+        /// <summary>
+        /// Metodo SendCallBack: Metodo en el cual el servidor vuelve a estar en escucha para recibir llamadas nuevas
+        /// </summary>
+        /// <param name="ar"></param>
         private void SendCallback(IAsyncResult ar)
         {
             Socket client = (Socket)ar.AsyncState;

@@ -19,7 +19,12 @@ namespace HttpServer
         public Dictionary<EHeaders,string> Headers { get; set; }
         public string MessageBody { get; set; }
 
-        
+
+    
+        /// <summary>
+        /// Metodo HTTpRequestMessage: Metodo en el cual se crea el objeto HTTpRquestMessage basado en una cadena de caracteres
+        /// </summary>
+        /// <param name="request"></param>
         public HttpRequestMessage(string request)
         {
             var lineas = request.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HttpServer.Enums
 {
+    /// <summary>
+    /// Enums definidos
+    /// </summary>
     enum EHeaders
     {
         [StringValue("Accept")]
