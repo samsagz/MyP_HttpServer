@@ -84,6 +84,25 @@ Repositorio : [MyP_HttpServer]( https://github.com/samsagz/MyP_HttpServer )
 | UT003 | Verificar la escritura del log | Al momento de realizar una solicitud, se debe de crear un archivo .txt con la peticion y las caracteristicas de la misma |
 
 
+
+## **INSTRUCTIVO DE USO**
+**Nota:** tienes que tener en cuenta que para poder ejecutar el codigo y las pruebas, se deben de tener las siguientes herramientas: 
+*	Postman.
+*	Visual Studio IDE. 
+*	Git.
+
+Para realizar la ejecución del codigo se deben de realizar los siguientes pasos:
+1.	Dirigirse a la consola de Git, descargar o generar un clon del codigo del proyecto. 
+2.	Ingresar al IDE de visual Studio, en el menú de archivo, seleccionamos la opción Abrir proyecto o solución, e importamos el archivo .sln que se encuentra en la ruta MyP_HttpServer\HttpServer
+3.	Abrir la consola de Postman e importar el archivo de pruebas. El archivo de pruebas se encuentra en la ruta del proyecto \MyP_HttpServer\Contenido Pruebas Postman
+4.	Para ejecutar las pruebas se debe:
+
+*	Iniciar el servidor en IDE visual Studio. 
+*	Dirigirnos al modulo runner de la consola de Postman. 
+*	Seleccionar las pruebas ServidorHttp. 
+*	Recuerda que se puede modificar las iteraciones a realizar, por defecto el siempre lanza una iteración. 
+*	Y en la parte posterior de la pantalla seleccionar la Run ServidorHttp.  
+
 ## **GLOSARIO**
 
 | TERMINO | DESCRIPCIÓN  |
