@@ -1,4 +1,5 @@
 ﻿using HttpServer.Enums;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,10 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace HttpServer
 {
-    
+
 
     class Server
     {
@@ -33,7 +35,7 @@ namespace HttpServer
         }
 
 
-     
+
 
         /// <summary>
         /// Metodo Start: Metodo en el cual el servidor estará a la espera de una comunicación con un cliente. Se define el puerto
@@ -84,15 +86,24 @@ namespace HttpServer
             Array.Copy(buffer, RecivedBytes, size);
             String data = Encoding.ASCII.GetString(RecivedBytes);
             Program.AddLog(data);
+            string response;
+            HttpResponseMessage httpResponse;
+            try
+            {
+                HttpRequestMessage request = new HttpRequestMessage(data);
+                Program.AddLog(JsonConvert.SerializeObject(request));
 
-            HttpRequestMessage request = new HttpRequestMessage(data);
+                //TODO: Interpretar URI, si existe cargar el HTML como string
+                httpResponse = MessageConstructor.ResponseMessage(request.HTTPVersion, request.RequestURI,request.Method);
+                response = httpResponse.GenerateHttpResponse();
 
-            //TODO: Interpretar URI, si existe cargar el HTML como string
-            HttpResponseMessage httpResponse = ConstructMessage.ConstructResponseMessage(request.HTTPVersion, request.RequestURI);
-            string response = httpResponse.GenerateHttpResponse();
-
-            Program.AddLog(response);
-
+                Program.AddLog(JsonConvert.SerializeObject(httpResponse));
+            }
+            catch (NotSupportedException ne)
+            {
+                httpResponse = MessageConstructor.ResponseMethodNotAllowedMessage("HTTP/1.1");
+                response = httpResponse.GenerateHttpResponse();
+            }
             byte[] responseBytes = Encoding.ASCII.GetBytes(response);
             client.BeginSend(responseBytes, 0, responseBytes.Length, SocketFlags.None, new AsyncCallback(SendCallback), client);
 

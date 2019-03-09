@@ -37,14 +37,14 @@ namespace HttpServer
             }
             catch (Exception)
             {
-                throw new Exception("RequestLine, Metodo no detectado");
+                throw new NotSupportedException("RequestLine, Metodo no detectado");
             }
               
             RequestURI = RequestLine[1];
             HTTPVersion = RequestLine[2];
 
             if (HTTPVersion != "HTTP/1.1")
-                throw new NotSupportedException("");
+                throw new NotSupportedException("RequestLine, Estandar HTTP no soportado");
 
             Headers = new Dictionary<EHeaders, string>();
             EHeaders tempEnum;

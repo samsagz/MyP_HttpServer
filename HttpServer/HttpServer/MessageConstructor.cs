@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace HttpServer
 {
-    class ConstructMessage
+    class MessageConstructor
     {
-        public static HttpResponseMessage ConstructResponseMessage(string httpVersion, string uri)
+        public static HttpResponseMessage ResponseMessage(string httpVersion, string uri, EMethod method)
         {
             string error404 = "/ProyectoHttp/error404.html";
 
             HttpResponseMessage response;
             EStatusCode status;
-            Dictionary<EHeaders, string> headers; 
+            Dictionary<EHeaders, string> headers;
             string messageBody = string.Empty;
             try
             {
@@ -35,8 +35,24 @@ namespace HttpServer
                 };
 
                 //string uriPath = string.Format("{1}/html{0}", uri,Directory.GetCurrentDirectory()).Replace("/","\\");
-                string uriPath = string.Format("./html{0}", uri).Replace("/","\\");
-                messageBody = File.ReadAllText(uriPath,Encoding.UTF8);
+                string uriPath = string.Format("./html{0}", uri).Replace("/", "\\");
+
+                switch (method)
+                {
+                    case EMethod.HEAD:
+                        messageBody = string.Empty;
+                        break;
+                    case EMethod.OPTIONS:
+                    case EMethod.GET:
+                    case EMethod.POST:
+                    case EMethod.PUT:
+                    case EMethod.DELETE:
+                    case EMethod.TRACE:
+                    case EMethod.CONNECT:
+                    default:
+                        messageBody = File.ReadAllText(uriPath, Encoding.UTF8);
+                        break;
+                }
             }
             catch (Exception)
             {
@@ -59,5 +75,35 @@ namespace HttpServer
 
             return response;
         }
+
+        public static HttpResponseMessage ResponseMethodNotAllowedMessage(string httpVersion)
+        {
+
+            HttpResponseMessage response;
+            EStatusCode status;
+            Dictionary<EHeaders, string> headers;
+            string messageBody = string.Empty;
+
+            status = EStatusCode.MethodNotAllowed;
+
+            headers = new Dictionary<EHeaders, string>
+                {
+                    { EHeaders.acceptranges, "bytes" },
+                    { EHeaders.cachecontrol, "max-age = 604800" },
+                    { EHeaders.contenttype, "text/html; charset=UTF-8" },
+                    { EHeaders.date, DateTime.Now.ToString("ddd, dd MMM yyy HH:mm:ss GMT").Replace(".", "") },
+                    { EHeaders.expires, DateTime.Now.AddDays(7).ToString("ddd, dd MMM yyy HH:mm:ss GMT").Replace(".", "") },
+                    { EHeaders.lastmodified, "Fri, 09 Aug 2013 23:54:35 GMT" },
+                    { EHeaders.vary, "Accept-Encoding" },
+                    { EHeaders.xcache, "HIT" }
+                };
+
+            messageBody = string.Empty;
+
+            response = new HttpResponseMessage(httpVersion, status, string.Empty, headers, messageBody);
+
+            return response;
+        }
+
     }
 }

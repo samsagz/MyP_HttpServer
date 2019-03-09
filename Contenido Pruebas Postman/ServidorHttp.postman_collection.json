@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "be00b7d0-1821-4f94-9ef6-e45b5639dbbd",
+		"name": "ServidorHttp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "holamundo.html",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "29b95e43-bf72-4839-9ee8-de6349f88064",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "hola mundo mundial"
+				},
+				"url": {
+					"raw": "http://localhost:8080/holamundo.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"holamundo.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index.html",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d406fe2-5472-435a-bd3c-4164bf4af401",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "hola mundo mundial"
+				},
+				"url": {
+					"raw": "http://localhost:8080/ProyectoHttp/index.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ProyectoHttp",
+						"index.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "error.html",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9f5ae93e-f5a7-4c20-ae45-c3a67fdf368b",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () { pm.response.to.have.status(404); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "hola mundo mundial"
+				},
+				"url": {
+					"raw": "http://localhost:8080/error.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"error.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get index.html",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d406fe2-5472-435a-bd3c-4164bf4af401",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "hola mundo mundial"
+				},
+				"url": {
+					"raw": "http://localhost:8080/ProyectoHttp/index.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ProyectoHttp",
+						"index.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNLOCK index.html",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d406fe2-5472-435a-bd3c-4164bf4af401",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () { pm.response.to.have.status(405); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "UNLOCK",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/ProyectoHttp/index.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ProyectoHttp",
+						"index.html"
+					]
+				},
+				"description": "Not Allowed Method"
+			},
+			"response": []
+		},
+		{
+			"name": "OPTIONS index.html",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d406fe2-5472-435a-bd3c-4164bf4af401",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "OPTIONS",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/ProyectoHttp/index.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ProyectoHttp",
+						"index.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT index.html",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d406fe2-5472-435a-bd3c-4164bf4af401",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/ProyectoHttp/index.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ProyectoHttp",
+						"index.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HEAD index.html",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d406fe2-5472-435a-bd3c-4164bf4af401",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "HEAD",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/ProyectoHttp/index.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ProyectoHttp",
+						"index.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE index.html",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d406fe2-5472-435a-bd3c-4164bf4af401",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/ProyectoHttp/index.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ProyectoHttp",
+						"index.html"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
